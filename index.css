@@ -2,7 +2,7 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0px;
     overflow-x: hidden;
   padding: 0%;}
-
+*{overflow-x: hidden;}
 
 #logo{width: 40px;
       border-radius: 50%;
@@ -131,13 +131,17 @@ footer{background-color: #35424a;
 
 /* for blog */
 #blog_box{
-  height: 250px; 
- width: 300px;
+  height: 230px; 
+ width: 200px;
+ overflow-x: hidden;
  text-align: center;
  border-radius: 20px;
 }
 #blog_boxs{box-shadow: 2px 3px 4px 5px black;
             border-radius: 15px;
+            /* width: 320px; */
+           
+
 }
 
 /* for contact pages */
