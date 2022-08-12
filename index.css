@@ -1,5 +1,6 @@
 body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0px;
+    overflow-x: hidden;
   padding: 0%;}
 
 
@@ -14,8 +15,23 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #mypic_container{border-right: 2px solid snow;
 }
+
+/* live backgrounds */
+/* #home_bg{background-image: url(image/background6.gif);
+        background-size: contain;} */
+#footer_bg{background-image: url(image/background1.gif);
+        background-size: contain;}
+#services{background-image: url(image/background.gif);
+          background-repeat: no-repeat;
+        background-size: cover;}
+/* #services{background-image: url(image/background5.webp);
+          background-repeat: no-repeat;
+        background-size: cover;} */
+/* #about{background-image: url(image/background.gif);
+          background-repeat: no-repeat;
+        background-size: cover;} */
 #showcase{
-  /* background-image: url(showcase.jpg); */
+  background-image: url(showcase.jpg);
           min-height: 400px;
           background-position:center ;
           padding-top: 50px;
