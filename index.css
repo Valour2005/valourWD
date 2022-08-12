@@ -1,5 +1,6 @@
 body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0px;
+    background-color: black;
     overflow-x: hidden;
   padding: 0%;}
 *{overflow-x: hidden;}
@@ -17,19 +18,18 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* live backgrounds */
-/* #home_bg{background-image: url(image/background6.gif);
-        background-size: contain;} */
+#home_bg{ background:linear-gradient(navy, black);
+  /* background-image: url(image/moon.jpg);
+         background-repeat: no-repeat;
+        background-size: cover; */
+      }
 #footer_bg{background-image: url(image/background1.gif);
         background-size: contain;}
 #services{background-image: url(image/background.gif);
           background-repeat: no-repeat;
         background-size: cover;}
-/* #services{background-image: url(image/background5.webp);
-          background-repeat: no-repeat;
-        background-size: cover;} */
-/* #about{background-image: url(image/background.gif);
-          background-repeat: no-repeat;
-        background-size: cover;} */
+#portfolio{background:linear-gradient(rgb(8, 8, 68), black)}
+#about{background:linear-gradient(navy, black);}
 #showcase{
   background-image: url(showcase.jpg);
           min-height: 400px;
