@@ -4,6 +4,10 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow-x: hidden;
   padding: 0%;}
 *{overflow-x: hidden;}
+[class*="fab"]{
+font-size: 20px;
+}
+[class*="fab"]:hover{font-size: 19px;}
 
 #logo{width: 40px;
       border-radius: 50%;
@@ -24,49 +28,38 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  
   0%{  background-image: url(image/home_background.png);
     height: 280px;
-margin-top: 10px;
+margin-top: 50px;
     }
    35%{ 
     background-image: url(image/valour.png);
     height: 420px;
-
+     margin-top: 0%;
         }
-  /* 40%{ 
-    background-image: url(image/logo_css.png); 
-    height: 280px;
-    margin-top: 10px;
-
-        } */
    75%{ 
     background-image: url(image/showcase.jpg);
     height: 280px;
-    margin-top: 10px;
+    margin-top: 50px;
 
         }
-   /* 80%{ 
-    background-image: url(image/logo_html.png); 
-    height: 280px;
-    margin-top: 10px;
-
-        } */
+ 
 }
 #mypic_container{border-right: 2px solid snow;
 
 }
 
 /* live backgrounds */
-#home_bg{ background:linear-gradient(rgb(1, 1, 76), black);
-  /* background-image: url(image/moon.jpg);
-         background-repeat: no-repeat;
-        background-size: cover; */
+#home_bg{ background:linear-gradient(black, black);
+
       }
 #footer_bg{background-image: url(image/background1.gif);
-        background-size: contain;}
+        background-size: 100% 100%;}
 #services{background-image: url(image/background.gif);
           background-repeat: no-repeat;
         background-size: cover;}
 #portfolio{background:linear-gradient(black,rgb(8, 8, 68), black)}
-#about{background:linear-gradient(black,navy, black);}
+#about{background:linear-gradient(black,rgb(2, 2, 47), black);}
+#blog{background:linear-gradient(black,rgb(8, 8, 68), black)}
+
 #showcase{
   background-image: url(showcase.jpg);
           min-height: 400px;
