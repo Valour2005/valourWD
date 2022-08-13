@@ -11,14 +11,35 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   iframe{width: 200px;
          height: 200px;}
 #mypic{
-   width: 300px;
-   
+  animation: example 25s infinite step-end alternate;
+  animation-delay: 10s;
+   width: 320px;
+   text-align: center;
+   height: 300px;
+   background-image: url(image/home_background.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  }
+
+@keyframes example {
+  0%{  background-image: url(image/home_background.png);
+    }
+  25%{ 
+    background-image: url(image/logo_css.png); 
+        }
+   55%{ 
+    background-image: url(image/showcase.jpg);
+        }
+   80%{ 
+    background-image: url(image/logo_html.png); 
+        }
 }
 #mypic_container{border-right: 2px solid snow;
+
 }
 
 /* live backgrounds */
-#home_bg{ background:linear-gradient(navy, black);
+#home_bg{ background:linear-gradient(black, black);
   /* background-image: url(image/moon.jpg);
          background-repeat: no-repeat;
         background-size: cover; */
@@ -28,27 +49,19 @@ body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 #services{background-image: url(image/background.gif);
           background-repeat: no-repeat;
         background-size: cover;}
-#portfolio{background:linear-gradient(rgb(8, 8, 68), black)}
-#about{background:linear-gradient(navy, black);}
+#portfolio{background:linear-gradient(black,rgb(8, 8, 68), black)}
+#about{background:linear-gradient(black,navy, black);}
 #showcase{
   background-image: url(showcase.jpg);
           min-height: 400px;
           background-position:center ;
           padding-top: 50px;
-          animation: example 10s infinite ;
-          animation-delay: 5s;
           text-transform: capitalize;
           background-size: cover;
           text-align: center;
           color: #ffffff;
 }
-/* 
-@keyframes example {
-  0%{  background-image: url(showcase.jpg);  }
-  100%{ 
-    background-image: url(laptopgusy.jpg); 
-        }
-} */
+
  .valour{color:#e8491d;
               }
 #active{
@@ -67,9 +80,11 @@ a:active{color: green;}
 
 
                /* from services.php */
-               #qoute{height: 400px;
+               #qoute{height: 450px;
                 box-shadow: 2px 3px 4px 5px black;   
               border-radius: 5px;
+              opacity: 0.6;
+              background-color: black;
               }
                 #input{
                      background-color: transparent;
