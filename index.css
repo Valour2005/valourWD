@@ -53,10 +53,11 @@ margin-top: 50px;
       }
 #footer_bg{background-image: url(image/background1.gif);
         background-size: 100% 100%;}
-#services{background-image: url(image/background.gif);
+/* #services{background-image: url(image/background.gif);
           background-repeat: no-repeat;
-        background-size: cover;}
+        background-size: cover;} */
 #portfolio{background:linear-gradient(black,rgb(8, 8, 68), black)}
+#services{background:linear-gradient(black,rgb(8, 8, 68), black)}
 #about{background:linear-gradient(black,rgb(2, 2, 47), black);}
 #blog{background:linear-gradient(black,rgb(8, 8, 68), black)}
 
