@@ -1,176 +1,492 @@
-body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0px;
-    background-color: black;
-    overflow-x: hidden;
-  padding: 0%;}
-*{overflow-x: hidden;}
-[class*="fab"]{
-font-size: 20px;
+/* ============================================
+   GLOBAL STYLES & BASE SETUP
+   ============================================ */
+* {
+  overflow-x: hidden;
 }
-[class*="fab"]:hover{font-size: 19px;}
 
-#logo{width: 40px;
-      border-radius: 50%;
-      }
-  iframe{width: 200px;
-         height: 200px;}
-#mypic{
-  animation: example 25s infinite step-end alternate;
-  /* animation-delay: 10s; */
-   width: 320px;
-   text-align: center;
-   background-image: url(image/home_background.png);
+body {
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #ffffff;
+}
+
+/* ============================================
+   TYPOGRAPHY & LINKS
+   ============================================ */
+a {
+  text-decoration: none;
+  color: #35424a;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e8491d;
+  animation: colorPulse 0.6s ease;
+}
+
+a:active {
+  color: #4ade80;
+}
+
+.valour {
+  color: #e8491d;
+  font-weight: bold;
+}
+
+#active {
+  font-style: italic;
+}
+
+/* ============================================
+   NAVIGATION & HEADER
+   ============================================ */
+#logo {
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #e8491d);
+}
+
+[class*="fab"] {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+[class*="fab"]:hover {
+  font-size: 21px;
+  animation: bounce 0.6s ease;
+}
+
+/* ============================================
+   HOME SECTION
+   ============================================ */
+#home_bg {
+  background: linear-gradient(135deg, #000000 0%, #0a0a2e 50%, #000000 100%);
+  animation: gradientShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+#mypic_container {
+  border-right: 2px solid snow;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+#mypic {
+  animation: imageSlideShow 25s infinite step-end alternate;
+  width: 320px;
+  text-align: center;
+  background-image: url(image/home_background.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  }
+  border-radius: 10px;
+}
 
-@keyframes example {
- 
-  0%{  background-image: url(image/home_background.png);
+#showcase {
+  background-image: url(showcase.jpg);
+  min-height: 400px;
+  background-position: center;
+  padding-top: 50px;
+  text-transform: capitalize;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  animation: slideInRight 0.8s ease-out;
+}
+
+#showcase h2 {
+  animation: fadeInDown 1s ease-out;
+}
+
+#showcase p {
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* ============================================
+   BACKGROUND SECTIONS
+   ============================================ */
+#footer_bg {
+  background-image: url(image/background1.gif);
+  background-size: 100% 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+#portfolio {
+  background: linear-gradient(135deg, #000000 0%, #080840 50%, #000000 100%);
+  animation: gradientShift 15s ease infinite reverse;
+  background-size: 400% 400%;
+}
+
+#services {
+  background: linear-gradient(135deg, #000000 0%, #080840 50%, #000000 100%);
+  animation: gradientShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+#about {
+  background: linear-gradient(135deg, #000000 0%, #02022f 50%, #000000 100%);
+  animation: gradientShift 15s ease infinite reverse;
+  background-size: 400% 400%;
+}
+
+#blog {
+  background: linear-gradient(135deg, #000000 0%, #080840 50%, #000000 100%);
+  animation: gradientShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background-color: #35424a;
+  text-align: center;
+  padding: 8px;
+  color: snow;
+  animation: fadeIn 1s ease-in;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+#input {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  color: snow;
+  border-bottom: 2px solid grey;
+  transition: all 0.3s ease;
+}
+
+#input:focus {
+  border-bottom-color: #e8491d;
+  box-shadow: 0 0 10px rgba(232, 73, 29, 0.3);
+  outline: none;
+}
+
+#message {
+  background-color: transparent;
+  border: 2px solid grey;
+  text-transform: capitalize;
+  color: snow;
+  max-height: 120px;
+  min-height: 80px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+#message:focus {
+  border-color: #e8491d;
+  box-shadow: 0 0 15px rgba(232, 73, 29, 0.4);
+  outline: none;
+}
+
+#qoute {
+  height: 450px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  animation: slideUp 0.8s ease-out;
+}
+
+#qoute:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(232, 73, 29, 0.5);
+}
+
+button {
+  width: 100px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  animation: pulse 0.6s ease;
+  transform: scale(1.05);
+}
+
+#newsletter {
+  background-color: #35424a;
+  padding: 8px;
+  color: snow;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+#newsletter:hover {
+  background-color: rgba(232, 73, 29, 0.1);
+  box-shadow: inset 0 0 10px rgba(232, 73, 29, 0.3);
+}
+
+#newsletter_btn {
+  background-color: tomato;
+  color: snow;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#newsletter_btn:hover {
+  background-color: #ff6347;
+  box-shadow: 0 0 15px rgba(255, 99, 71, 0.5);
+}
+
+/* ============================================
+   PORTFOLIO SECTION
+   ============================================ */
+#portfolio_pic {
+  height: 250px;
+  margin-top: -278px;
+  width: 300px;
+  text-align: center;
+  border-radius: 20px;
+  animation: zoomIn 0.8s ease-out;
+}
+
+#hover-item {
+  height: 250px;
+  position: relative;
+  width: 300px;
+  border-radius: 20px;
+  margin: auto;
+  text-align: left;
+  text-transform: capitalize;
+  padding: 10px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(135deg, rgba(232, 73, 29, 0.1), rgba(8, 8, 68, 0.3));
+}
+
+#hover-item:hover {
+  opacity: 1;
+  animation: fadeInScale 0.4s ease-out;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(232, 73, 29, 0.4);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+#about_cards {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+#about_cards:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(232, 73, 29, 0.4);
+  animation: lift 0.4s ease;
+}
+
+/* ============================================
+   BLOG SECTION
+   ============================================ */
+#blog_box {
+  height: 230px;
+  width: 200px;
+  overflow-x: hidden;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+#blog_box:hover {
+  animation: bounce 0.6s ease;
+}
+
+#blog_boxs {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(8, 8, 68, 0.2), rgba(232, 73, 29, 0.05));
+}
+
+#blog_boxs:hover {
+  box-shadow: 0 0 25px rgba(232, 73, 29, 0.3);
+  transform: translateY(-8px);
+}
+
+/* ============================================
+   ANIMATIONS - FADE EFFECTS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   ANIMATIONS - SLIDE EFFECTS
+   ============================================ */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   ANIMATIONS - ZOOM & SCALE EFFECTS
+   ============================================ */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   ANIMATIONS - PULSE & BOUNCE
+   ============================================ */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes lift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+/* ============================================
+   ANIMATIONS - SPECIAL EFFECTS
+   ============================================ */
+@keyframes imageSlideShow {
+  0% {
+    background-image: url(image/home_background.png);
     height: 280px;
-margin-top: 50px;
-    }
-   35%{ 
+    margin-top: 50px;
+  }
+  35% {
     background-image: url(image/home_background.png);
     height: 420px;
-     margin-top: 0%;
-        }
-   75%{ 
+    margin-top: 0%;
+  }
+  75% {
     background-image: url(image/showcase.jpg);
     height: 280px;
     margin-top: 50px;
-
-        }
- 
-}
-#mypic_container{border-right: 2px solid snow;
-
+  }
 }
 
-/* live backgrounds */
-#home_bg{ background:linear-gradient(black, black);
-
-      }
-#footer_bg{background-image: url(image/background1.gif);
-        background-size: 100% 100%;}
-/* #services{background-image: url(image/background.gif);
-          background-repeat: no-repeat;
-        background-size: cover;} */
-#portfolio{background:linear-gradient(black,rgb(8, 8, 68), black)}
-#services{background:linear-gradient(black,rgb(8, 8, 68), black)}
-#about{background:linear-gradient(black,rgb(2, 2, 47), black);}
-#blog{background:linear-gradient(black,rgb(8, 8, 68), black)}
-
-#showcase{
-  background-image: url(showcase.jpg);
-          min-height: 400px;
-          background-position:center ;
-          padding-top: 50px;
-          text-transform: capitalize;
-          background-size: cover;
-          text-align: center;
-          color: #ffffff;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
- .valour{color:#e8491d;
-              }
-#active{
-        font-style: italic;
-     }
-a{text-decoration: none;
-  color: #35424a;}s
-a:hover{color: #e8491d;}
-a:active{color: green;}
-#newsletter{background-color: #35424a;
-         padding: 8px;
-       color: snow;}
-#newsletter_btn{background-color: tomato ;
-               color: snow;
-               border: none;}
-
-
-               /* from services.php */
-               #qoute{height: 450px;
-                box-shadow: 2px 3px 4px 5px black;   
-              border-radius: 5px;
-              opacity: 0.6;
-              background-color: black;
-              }
-                #input{
-                     background-color: transparent;
-                     border: none;
-                     text-transform: capitalize;
-                    color: snow;
-                    border-bottom: 2px solid grey;}
-                    
-         #message{
-                     background-color: transparent;
-                     border: none;
-                     text-transform: capitalize;
-                    color: snow;
-                    max-height: 120px;
-                    min-height: 80px;
-                    border: 2px solid grey;}
-         button{width: 100px;  }
-               /* endb */
-
-
-footer{background-color: #35424a;
-    text-align: center;
-    padding: 8px;
-    color: snow;}
-
-
-
-
-
-
-
-    /* for port folio page */
-    #portfolio_pic{height: 250px; 
-                   margin-top: -278px;
-                  width: 300px;
-                  text-align: center;
-                  border-radius: 20px;
-
-      }
-    #hover-item{height: 250px;
-               position: relative;
-                width: 300px;
-                border-radius: 20px;
-                margin: auto;
-                text-align: left;
-                text-transform: capitalize;
-                padding: 10px;
-                transition: all ease-in-out;
-                opacity: 0;
-              }
-  #hover-item:hover{opacity: 1;
-                   transition: ease-in-out;}
-
-
-
-                   /*for  about page */
-#about_cards{ box-shadow: 2px 3px 4px 5px black;}
-#about_cards:hover{ background-color: black;   }
-
-/* for blog */
-#blog_box{
-  height: 230px; 
- width: 200px;
- overflow-x: hidden;
- text-align: center;
- border-radius: 20px;
+@keyframes colorPulse {
+  0% {
+    color: #35424a;
+  }
+  50% {
+    color: #ff6b6b;
+  }
+  100% {
+    color: #e8491d;
+  }
 }
-#blog_boxs{box-shadow: 2px 3px 4px 5px black;
-            border-radius: 15px;
-            /* width: 320px; */
-           
-
-}
-
-/* for contact pages */
-/* #qoutes{height: 400px;
-  box-shadow: 2px 3px 4px 5px black;   
-border-radius: 25px;
-} */
